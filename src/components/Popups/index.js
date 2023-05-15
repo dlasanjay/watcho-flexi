@@ -273,6 +273,33 @@ const Subscription = ({showPopup,closePopup, plan}) => {
                         <dd>({checkout.selectedPlan.SubscriptionPlanDurationName} Subscription)</dd>
                     </div>
                     <div className='allpacks'>You have choose  {checkout.selectedPlan.SubscriptionApps ? (checkout.selectedPlan.SubscriptionApps).length : 0} more OTT's of your choice</div>
+
+                    {
+                    checkout.selectedPlan ?
+                        <>
+                        
+                        
+                        <ul className={`platforms-list`}>
+                            {
+                            checkout.selectedPlan.SubscriptionApps && checkout.selectedPlan.SubscriptionApps.map((row) => {
+                                return (<li>
+                                <img src={row.AppIconUrl} alt={row.AppName} /></li>
+                                )
+                            })
+                            }
+                            <li>+</li>
+                            
+                        </ul>
+                        </>
+                        : ""
+                    }
+                    <ul className={`platforms-list`}>
+                        <li><img src={require('../../assets/images/logos/logos-2.png')} alt="" /></li>
+                        <li><img src={require('../../assets/images/logos/logos-3.png')} alt="" /></li>
+                        <li><img src={require('../../assets/images/logos/logos-4.png')} alt="" /></li>
+                        <li><img src={require('../../assets/images/logos/logos-5.png')} alt="" /></li>
+                        <li><img src={require('../../assets/images/logos/logos-7.png')} alt="" /></li>       
+                    </ul>
                 </div>
                 <div className='summaryBox'>
                     <p>Coupon Code</p>
