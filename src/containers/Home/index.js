@@ -51,7 +51,6 @@ const Index = () => {
   const fetchPlanList = async () => {
     
     try {
-      console.log('data', apiData.Result)
       
       var filterData = filterPlans(apiData.Result, 'Annual');
       var max_filterData = maxPlan(filterData, 'Annual');

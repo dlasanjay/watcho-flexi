@@ -54,7 +54,7 @@ const Index = ({ plan, handleClick, showSubsPopup, plans}) => {
         <div className='packagePrice'>
           <div className='priceBox'>
             <div className='discounted'>&#8377; {filterObj.SubscriptionPriceWithTax}</div>
-            <div className='actual'>(&#8377; {filterObj.SubscriptionDisplayPriceWithTax}/{activePlan == 'Annual' ?'M':'Y'})</div>
+            <div className='actual'>(&#8377; {Math.round(filterObj.SubscriptionDisplayPriceWithTax/12)}/M)</div>
           </div>
           <div className='subsType'>
             <div className='radioBox'>

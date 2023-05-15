@@ -83,23 +83,25 @@ const Subscription = ({showPopup,closePopup, plan}) => {
 
         }
         else {
-            console.log(JSON.stringify({"MobileNo":verificationData.mobile}))
+            // console.log(JSON.stringify({"MobileNo":verificationData.mobile}))
 
-            let param = await encryptData({"MobileNo":verificationData.mobile});
-            // console.log(param, 'param')
+            // let param = await encryptData({"MobileNo":verificationData.mobile});
+            // // console.log(param, 'param')
 
-            const appData = await generateTokenAPI(param);
-            if(appData.ResultStatus && (appData.ResultStatus).toLowerCase() == 'success') {
-                checkout.setAuthorizationToken(appData.Result)
-                const sendOtpAppData = await sendOtpRequest(param, appData.Result);
-                if(sendOtpAppData.ResultStatus && (sendOtpAppData.ResultStatus).toLowerCase() == 'success') {
-                    error = {mobile : null}
-                    setCheckoutStep(2)
-                }
-                else {
-                    error = {mobile : 'Mobile number is invalid'}
-                }
-            }
+            // const appData = await generateTokenAPI(param);
+            // if(appData.ResultStatus && (appData.ResultStatus).toLowerCase() == 'success') {
+            //     checkout.setAuthorizationToken(appData.Result)
+            //     const sendOtpAppData = await sendOtpRequest(param, appData.Result);
+            //     if(sendOtpAppData.ResultStatus && (sendOtpAppData.ResultStatus).toLowerCase() == 'success') {
+            //         error = {mobile : null}
+            //         setCheckoutStep(2)
+            //     }
+            //     else {
+            //         error = {mobile : 'Mobile number is invalid'}
+            //     }
+            // }
+
+            setCheckoutStep(2)
           
 
         }
@@ -111,19 +113,21 @@ const Subscription = ({showPopup,closePopup, plan}) => {
     }
     const verifyOtp = async ()=> {
         var error = {};
-        let param = await encryptData({"MobileNo":verificationData.mobile,"OTP" : verificationData.otp});
-        // console.log(param, 'param')
+    //     let param = await encryptData({"MobileNo":verificationData.mobile,"OTP" : verificationData.otp});
+    //     // console.log(param, 'param')
 
-        const appData = await validateOtp(param, checkout.authToken);
+    //     const appData = await validateOtp(param, checkout.authToken);
 
-       if(appData.ResultStatus && (appData.ResultStatus).toLowerCase() == 'success') {
-            checkout.setAuthorization(appData.Result)
-            error = {otp : null}
-            setCheckoutStep(3)
-        }
-        else {
-            error = {otp : 'Please enter correct otp'}
-        }
+    //    if(appData.ResultStatus && (appData.ResultStatus).toLowerCase() == 'success') {
+    //         checkout.setAuthorization(appData.Result)
+    //         error = {otp : null}
+    //         setCheckoutStep(3)
+    //     }
+    //     else {
+    //         error = {otp : 'Please enter correct otp'}
+    //     }
+
+    setCheckoutStep(3)
 
         setVerificationError(verificationData => ({
             ...verificationData,
@@ -440,9 +444,9 @@ const Subscription = ({showPopup,closePopup, plan}) => {
                             </div>
                             
                         </div>
-                        <div className='mb-30'>
+                        {/* <div className='mb-30'>
                             <span className='subtext white'>Hello Again!<br/> It’s good to have you back! You have already availed the complimentary offer on this number. Please complete your payment before you get started. Happy Streaming!</span>
-                        </div>
+                        </div> */}
                         <button type='button' className='site-btn-default form-btn' onClick={()=>finalCheckout()}>Make Payment</button>
                     </form>
                 </div>

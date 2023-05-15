@@ -274,15 +274,15 @@
   flex-direction: column;
 }
 .packageName {
-  width: 50%;
-  font-size: max(4.444vw);
+  width: 56%;
+  font-size: max(5.6410256vw);
   font-family: 'Poppins Light';
   line-height: 6.666vw;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: normal;
 }
 .packageName span {
-  font-size: max(6.666vw);
+  font-size: max(5.6410256vw);
 }
 .packagePrice {
   width: 100%;
@@ -303,15 +303,19 @@
   flex-direction: column;
 }
 .discounted {
-  font-size: 6.666vw;
-  line-height: max(8.606vw);
-  order: 2;
+  font-size: 5.6410vw;
+  line-height: max(8.46153846vw);
+  order: 0;
 }
 .actual {
-  text-decoration: line-through;
-  font-size: max(12px,3.333vw);
+  font-size: max(3.07692vw);
 }
-
+.subsType {
+  display: flex;
+  gap: 5.5vw;
+  justify-content: flex-end;
+  margin-top: 5.128205vw;
+}
 .subsType .radioBox .check {
   border: 2px solid #fff;
   height: 18px;
@@ -322,6 +326,10 @@
   width: 10px;
   top: 2px;
   left: 2px;
+}
+.subsType .radioBox label {
+  font-size: max(3.333333vw);
+
 }
 .cardBody h4 {  
   font-size: 5.555vw;
@@ -346,11 +354,21 @@
   margin: auto;
 }
 .platforms-list li {
-  max-width: 11.111vw;
+  width: 11.6384vw;
   display: flex;
+  max-width: 100%;
+}
+.platforms-list li:nth-child(4) {
+  width: 2vw;
+}
+.addmore {
+  font-size: max(3.076923vw);
+  line-height: max(3.076923vw);
+  height: max(11.6384vw);
+  width: max(11.6384vw);
 }
 .platforms-list li img {
-  width: 11.111vw;
+  width: 11.6384vw;
 }
 .saveUp {
   font-size: 3.611vw;
