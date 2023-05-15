@@ -1,35 +1,52 @@
 .banner {
     padding-left: 8.59375vw;
-    padding-right: 7.552083vw;
+    padding-right: 6.0552083vw;
     display: flex;
     justify-content: space-between;
 }
 .banner-left {
-    width: 42.7083vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    min-height: 25vw;
+}
+.img-block {
+    position: absolute;
+    top:0;
+    right: 0;
+    min-height: 25vw;
+    width: 41.40625vw;
+}
+.img-block img {
+    max-width: 100%;
 }
 .banner-head {
     font-family: 'Poppins Medium';
     font-size: 2.864583vw;
-    line-height: 4.27083vw;
-    margin-top: 3.5vw;
+    line-height: 4.270833vw;
+    margin-top: 2vw;
 }
 .banner-subhead {
-    font-size: 1.822916vw;
+    font-size: 1.97916vw;
     line-height: 4.27083vw;
     color:#E2C621;
+}
+.banner-desc {
+    font-size:max(1.14583vw);
+    line-height: max(1.5625vw);
+    margin-top: 10px;
 }
 .banner-watcho-devices {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: center;
+    align-items: end;
     padding-top: 1.25vw;
 }
 .banner-watcho-devices > div {
-    font-size: 1.25vw;
+    font-size: 1.04166vw;
     line-height: 1.66666vw;
     font-family: 'Poppins Light';
     width: 7.552083vw;
@@ -42,6 +59,7 @@ ul.list-devices {
 }
 ul.list-devices li {
     text-align: center;
+    font-size: max(10px,0.83333333vw);
 }
 .banner-right {
     width: 37.5vw;

@@ -132,37 +132,51 @@ const Subscription = ({showPopup,closePopup, plan}) => {
     }
 
     const applyCoupon = async () => {
-        if(checkoutStep == 3) {
+        // if(checkoutStep == 3) {
 
-            // console.log(checkout.auth, 'auth')
-            let param = await encryptData({
-                "MobileNo": checkout.auth['MobileNo'], 
-                  "OTTSMSID": checkout.auth['OTTSMSID'], 
-                 "PromoCode": coupon, 
-                 "PaymentGateway": "",  
-                 "SubscriptionPlanID": checkout.selectedPlan.SubscriptionPlanID, 
-                 "PromoCodeProvider":"DTH", 
+        //     // console.log(checkout.auth, 'auth')
+        //     let param = await encryptData({
+        //         "MobileNo": checkout.auth['MobileNo'], 
+        //           "OTTSMSID": checkout.auth['OTTSMSID'], 
+        //          "PromoCode": coupon, 
+        //          "PaymentGateway": "",  
+        //          "SubscriptionPlanID": checkout.selectedPlan.SubscriptionPlanID, 
+        //          "PromoCodeProvider":"DTH", 
                    
                 
-            });
+        //     });
            
-            const appData = await VaildPromoCode(param, checkout.authToken);
-            // console.log(appData, 'coupon');
-            // console.log(checkout.auth, 'coupon');
+        //     const appData = await VaildPromoCode(param, checkout.authToken);
+        //     // console.log(appData, 'coupon');
+        //     // console.log(checkout.auth, 'coupon');
 
     
-        //    if(appData.ResultStatus && (appData.ResultStatus).toLowerCase() == 'success') {
-        //         setIsCouponApplied(true)
-        //         setIsCouponAppliedPopup(true)
-        //         setCouponError(null)
-        //         const getData = setTimeout(() => {
-        //             setIsCouponAppliedPopup(false)
+        // //    if(appData.ResultStatus && (appData.ResultStatus).toLowerCase() == 'success') {
+        // //         setIsCouponApplied(true)
+        // //         setIsCouponAppliedPopup(true)
+        // //         setCouponError(null)
+        // //         const getData = setTimeout(() => {
+        // //             setIsCouponAppliedPopup(false)
           
-        //         }, 4000);
-        //     }
-        //     else {
-        //         setCouponError('Coupon is invalid')
-        //     }
+        // //         }, 4000);
+        // //     }
+        // //     else {
+        // //         setCouponError('Coupon is invalid')
+        // //     }
+        // }
+
+        if(coupon.toLowerCase() == 'flexi200') {
+            setIsCouponApplied(true)
+            setIsCouponAppliedPopup(true)
+            setCouponError(null)
+            const getData = setTimeout(() => {
+                setIsCouponAppliedPopup(false)
+      
+            }, 2000);
+            // clearTimeout(getData)
+        }
+        else {
+            setCouponError('Coupon is invalid')
         }
 
     
@@ -248,13 +262,13 @@ const Subscription = ({showPopup,closePopup, plan}) => {
                 
                 <div className='summaryBox'>
                     <p>Order Summary</p>
-                    <h3>You are Paying for <span>{(checkout.selectedPlan.SubscriptionPlanName)?.toLowerCase()}</span> </h3>
+                    <h3>You are Paying for <span className='nameCapita'>{(checkout.selectedPlan.SubscriptionPlanName)?.toLowerCase().replace('-',' ')}</span> </h3>
                     <div className='subsprc'>
                         <span>&#8377; {checkout.selectedPlan.SubscriptionPriceWithTax}</span>
                         <del>&#8377; {checkout.selectedPlan.SubscriptionDisplayPriceWithTax}</del>
                         <dd>({checkout.selectedPlan.SubscriptionPlanDurationName} Subscription)</dd>
                     </div>
-                    <div className='allpacks'>All {checkout.selectedPlan.SubscriptionApps ? (checkout.selectedPlan.SubscriptionApps).length : 0} OTTs in one magnificent pack.</div>
+                    <div className='allpacks'>You have choose  {checkout.selectedPlan.SubscriptionApps ? (checkout.selectedPlan.SubscriptionApps).length : 0} more OTT's of your choice</div>
                 </div>
                 <div className='summaryBox'>
                     <p>Coupon Code</p>
@@ -325,6 +339,10 @@ const Subscription = ({showPopup,closePopup, plan}) => {
                     <p>The World Of Watcho Shall Be Yours Shortly</p>
                     <div className='paysteps'>
                         <ul className='step-two'>
+                            <li>
+                                <span className='dots fill'></span>
+                                <div>Add your<br /> favourite OTT's</div>
+                            </li>
                             <li>
                                 <span className='dots fill'></span>
                                 <div>Select<br /> a plan</div>

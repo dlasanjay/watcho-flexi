@@ -5,9 +5,9 @@
   .cardWrapper {
     display: flex;
     justify-content: center;
-    gap:3.125vw;
+    gap: 2.7125vw;
     flex-wrap: wrap;
-  }
+}
   .site-btn-default {
     display: inline-flex;
     background-color: #E42956;
@@ -103,7 +103,7 @@
     font-family: 'Poppins SemiBold';
   }
   .subsSteps {
-    width: max(47.39583vw);
+    width: max(53.39583vw);
     margin-left:auto;
     margin-right: auto;
     padding-top:max(9.375vw);
@@ -116,7 +116,7 @@
     text-align: center;
   }
   .setpBox {
-    width: 96%;
+    width: 88%;
     display: flex;
     justify-content: space-between;
     margin-top:max(25px,2.34375vw);
@@ -156,7 +156,7 @@
     display: inline-flex;
     font-size: max(16px,1.04166vw);
     justify-content: center;
-    width: 10%;
+    width: 14%;
   }
   .setpBoxTet > span:nth-child(2) {
     width: 15%;

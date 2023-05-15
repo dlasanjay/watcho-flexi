@@ -19,9 +19,10 @@ const filterPlans = (plans, type, name = null) => {
   
     let temp = plans.filter((arry)=>{
        
-            if(!(arry.SubscriptionPlanType).toLowerCase().includes('flex') && !(arry.SubscriptionPlanType).toLowerCase().includes('exclusive')) {
+            if(!(arry.SubscriptionPlanType).toLowerCase().includes('watcho') && !(arry.SubscriptionPlanType).toLowerCase().includes('exclusive')) {
       
               if(name != null) {
+                
                   return arry.SubscriptionPlanName==name &&   arry.SubscriptionPlanDurationName ==type
               }
               else {
@@ -110,6 +111,9 @@ const getOTTKeys =(temp) => {
   } 
 
   const removeFromString = (words, str) => {
+    if(str.includes('-')) {
+      str = str.replace('-', '')
+    }
     return words.reduce((result, word) => result.replace(word, ''), str)
   }
 

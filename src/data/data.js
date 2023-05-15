@@ -1,4 +1,4 @@
-"data": {
+export const apiData =  {
         "ResultStatus": "Success",
         "ResultCode": 0,
         "ResultMessage": null,

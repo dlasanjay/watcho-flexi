@@ -1,7 +1,7 @@
 export const questionsAnswers = [
     {
       id : 1,
-      question: "Can I watch content on multiple devices simultaneously?",
+      question: "Should I log in to all the OTTs separately?",
       answer:
         `<p>You can watch content of all participating Apps on 2 devices simultaneously. </p>
         <ul>
@@ -14,7 +14,7 @@ export const questionsAnswers = [
     },
     {
       id : 2,
-      question: "Do I have to install any additional apps to access partner App content with Watcho pack(s)?",
+      question: "How many users can watch the content at one time?",
       answer:`<p>For apps as, Watcho Exclusives, Klikk, Epic On, Oho Gujarati, Hungama and Chaupal content, once you click on play on any of the content, It will take you on content information screen where you will see tab “Watch now” , content playback starts inside Watcho.The content playback starts in a portrait mode. You can also view in the full screenmode.</p><p><b>Web access</b><br>
       For Disney+ Hotstar , SonyLIV, LiongatePlay , Hoichoi and Zee5 app content, once you click on play on any of the content, It will take you on content information screen where you will see “Watch now” tab,Once you click on it, It will take you to partner website
       <br>
@@ -43,7 +43,7 @@ export const questionsAnswers = [
     },
     {
       id : 3,
-      question: "What is the login process of the content partner Apps which are part of my subscription plan",
+      question: "Can I upgrade my plan mid-month?",
       answer:      `
       <ol>
       <li>Login to Watcho App with your 10 digit Mobile Number</li>
@@ -56,13 +56,8 @@ export const questionsAnswers = [
     },
     {
       id : 4,
-      question: "What is the minimum required internet speed to watch content?",
+      question: "Do I need to have a different login id and password for all OTTs?",
       answer:    `<p>There is no minimum speed required, but you will have a better-quality streaming experience if your speed is more than 2Mbps.
       </p>`,
-    },
-    {
-      id : 5,
-      question: "Can I cast videos from Watcho and partner app to my Smart TV?",
-      answer:    `<p>Yes, Watcho Exclusives content supports casting,We are working to make all partner content available for casting.Disney+Hotstar, SonyLIV, LionsgatePlay,Zee5 and Hoichoi's content can be casted directly from these Apps. In case you wish to know more about casting for these partner Apps, please visit partner T&C.</p>`,
-    },
+    }
   ];

@@ -12,7 +12,8 @@ const Index = ({ plan, handleClick, showSubsPopup, plans}) => {
   const handleChange = (event, SubscriptionPlanName) => {
     const target = event.target;
     const value = target.value;
-    setIsActiveplan(value)
+    setIsActiveplan(value);
+    console.log('value',value)
     
     let temp = filterPlans(plans.Result, value, SubscriptionPlanName);
     setFilterObj(temp[0])
@@ -32,7 +33,7 @@ const Index = ({ plan, handleClick, showSubsPopup, plans}) => {
   }
 
   return (
-    <div className={`subsCard ${(filterObj.SubscriptionPlanName).toLowerCase().includes('max') ?  'best-buy-subsCard' : ""}`} key={filterObj.SubscriptionPlanName}>
+    <div className={`subsCard ${(filterObj.SubscriptionPlanName).toLowerCase().includes('max') ?  'best-buy-subsCard' : ""} ${removeFromString(['Flexi'], filterObj.SubscriptionPlanName).toLowerCase()}`} key={filterObj.SubscriptionPlanName}>
       {
         (filterObj.SubscriptionPlanName).toLowerCase().includes('max') ?
         <div className='bestBuy'>
@@ -46,13 +47,14 @@ const Index = ({ plan, handleClick, showSubsPopup, plans}) => {
      
       <div className='cardHeader'>
         <h3 className='packageName'>
-          Watcho
-          <span>{removeFromString(['WATCHO'], filterObj.SubscriptionPlanName)}</span>
+          Flexi &nbsp;
+          
+          <span>{removeFromString(['Flexi'], filterObj.SubscriptionPlanName)}</span>
         </h3>
         <div className='packagePrice'>
           <div className='priceBox'>
             <div className='discounted'>&#8377; {filterObj.SubscriptionPriceWithTax}</div>
-            <div className='actual'>&#8377; {filterObj.SubscriptionDisplayPriceWithTax}</div>
+            <div className='actual'>(&#8377; {filterObj.SubscriptionDisplayPriceWithTax}/{activePlan == 'Annual' ?'M':'Y'})</div>
           </div>
           <div className='subsType'>
             <div className='radioBox'>
@@ -72,9 +74,9 @@ const Index = ({ plan, handleClick, showSubsPopup, plans}) => {
         {
           filterObj.SubscriptionApps ?
             <>
-
-              <h4>{filterObj.SubscriptionPlanDescription}</h4>
-              <p>Access across TV, Laptop, Mobile & Tablets at a time</p>
+              <p>3 Base Apps +</p>
+              <h4>Any {filterObj.SubscriptionRule.ApplicableAddOn} Apps</h4>
+              
               <ul className={`platforms-list ${filterObj.SubscriptionApps && addRequireClassName((filterObj.SubscriptionApps).length)}`}>
                 {
                   filterObj.SubscriptionApps.map((row) => {
@@ -83,12 +85,13 @@ const Index = ({ plan, handleClick, showSubsPopup, plans}) => {
                     )
                   })
                 }
-
+                <li>+</li>
+                <li><div className='addmore'>Add {filterObj.SubscriptionRule.ApplicableAddOn} more</div></li>
               </ul>
             </>
             : ""
         }
-        <div className='saveUp'>You save upto &#8377; {parseFloat(filterObj.SubscriptionDisplayPriceWithTax) - parseFloat(filterObj.SubscriptionPriceWithTax)}</div>
+        <div className='saveUp'>You save upto  {parseFloat(filterObj.SubscriptionDisplayPriceWithTax) - parseFloat(filterObj.SubscriptionPriceWithTax)}%</div>
         <button type='button' className='btn-subs' onClick={() => showSubsPopup(filterObj)}>Subscribe Now</button>
         <button onClick={() => handleClick(plan)} className='btn-readmore'>Know more</button>
       </div>

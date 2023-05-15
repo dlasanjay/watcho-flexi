@@ -5,11 +5,19 @@ const index = () => {
   return (
     <div className='banner'>
       <div className='banner-left'>
-        <h1 className='banner-head'>Streaming The Way You Like!</h1>
-        <h3 className='banner-subhead'>One Subscription. Many OTT's. Multiple Devices.</h3>
+        <div className='heading-block'>
+          <h1 className='banner-head'>Jaisa Chaho, Waisa Plan Banao</h1>
+          <h3 className='banner-subhead'>Choose your own OTT's with Flexi Plan</h3>
+        </div>
+        <div className='img-block'>
+          <img src={require('../../assets/images/banner/flexi-banner.png')} />
+        </div>
+        <div className='banner-desc'>
+          One Subscription. Many OTT's. Multiple Devices.
+        </div>
         <div className='banner-watcho-devices'>
             <div className=''>
-                <p>Watch on any device</p>
+                <p>Watch on <br />any device</p>
             </div>
             <ul className='list-devices'>
                 <li>
@@ -35,9 +43,7 @@ const index = () => {
             </ul>
         </div>
       </div>
-      <div className='banner-right'>
-        <img src={require('../../assets/images/banner/banner.png')} />
-      </div>
+      
     </div>
   )
 }

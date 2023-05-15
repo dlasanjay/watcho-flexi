@@ -11,7 +11,7 @@ import Modal from 'react-modal'
 import { questionsAnswers } from '../../data/faq'
 import axios from 'axios'
 import { deryptData, encryptData, getPlanList } from '../../api/Activity'
-import { planDetails } from '../../data/planDetails'
+import { apiData } from '../../data/data'
 import { compareData, filterPlans, maxPlan } from '../../api/Functions'
 import globalContext from '../../context/GlobalContext'
 Modal.setAppElement('#root');
@@ -51,16 +51,14 @@ const Index = () => {
   const fetchPlanList = async () => {
     
     try {
-      //let param = await encryptData({"Source" : "Web"})
-       let param = '4elZe6Py13x/gx7NAF2YlwPEWcXkZ4TdhI3Twc/4okc=';
-      const appData = await getPlanList(param);
-      console.log(param, 'getPlanList params')
-      var filterData = filterPlans(appData.Result, 'Annual');
+      console.log('data', apiData.Result)
+      
+      var filterData = filterPlans(apiData.Result, 'Annual');
       var max_filterData = maxPlan(filterData, 'Annual');
 
       setMaxPlanList(max_filterData)
       setPlanList(filterData);
-      setPlans(appData)
+      setPlans(apiData)
       setCompareList(compareData (filterData, max_filterData));
 
     } catch (e) {
@@ -126,14 +124,16 @@ const Index = () => {
          
         </div>
         <section className='subsSteps'>
-          <h2 className='sub-heading'>How to Buy Watcho Subscription</h2>
+          <h2 className='sub-heading'>How to Buy Flexi Plans Subscription</h2>
           <div className='stepWrap'>
           <div className='setpBox'>
             <span>1</span>
             <span>2</span>
             <span>3</span>
+            <span>4</span>
           </div>
           <div className='setpBoxTet'>
+            <span>Add your favourite OTT's</span>
             <span>Select a plan</span>
             <span>Verify your number</span>
             <span>Make payment</span>
@@ -141,7 +141,7 @@ const Index = () => {
           </div>
           <button className='subsplan-btn'  onClick={scrollTo}>Subscribe A Plan</button>
         </section>
-        <section className='compareSec'>
+        {/* <section className='compareSec'>
           <h3 className='expand-txt'>
             Need Help!  
             <button className='expand-btn' onClick={toggleExpand}>Compare & Make A Choice <i className="fa fa-angle-down"></i></button>
@@ -149,7 +149,7 @@ const Index = () => {
           <div className='plansCmpr'>
             <Plans expanPlan={expanPlan} handleClick={openModal} showSubsPopup={showSubsPopup} compareList={compareList} setCompareList={setCompareList} plans={plans}/>
           </div>
-        </section>
+        </section> */}
         <section className='faqsSec'>
           <h2 className='sub-heading'>FAQ's</h2>
           <Accordion questionsAnswers={questionsAnswers} />          
