@@ -1,0 +1,308 @@
+.plansWap {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.plansWap.hide {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.plansWap.show {
+    width: 100%;
+    height: auto;
+    overflow:visible;
+    transition: all 0.25s;
+}
+.headRow, .contRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: max(3.85416vw);
+}
+.headRow {
+    margin-top: max(25px,2.60416vw);
+    margin-bottom: max(25px,2.60416vw);
+}
+.headRow .rowLeft,.contRow .rowLeft {
+    width: calc(100%*(1/6));
+}
+.headRow .rowRight,.contRow .rowRight {
+    width: calc(100%*(5/6));
+    display: flex;    
+}
+.headRow .rowRight {
+    justify-content: space-between;
+}
+.contRow .rowRight {
+    justify-content: flex-start;
+    border-bottom: 1px dashed #eee;
+}
+.contRow .rowRight > * {
+    width: calc(100%*(1/4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.prcent > * {
+    font-size: max(18px,1.4583vw);
+    line-height: max(28px,2.1875vw);
+}
+.headRow .rowLeft span {
+    font-size: max(22px,1.97916vw);
+    font-family: 'Poppins Medium';
+    line-height: max(30px,2.1875vw);
+}
+.planClms {
+    width: calc(100%*(1/4) - 5px);
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: max(18px,1.5625vw);
+    text-transform:uppercase;
+    height: max(52px,4.27083vw);
+    border-radius: max(5px,0.52083vw);
+    border-width: 1px;
+    border-style: solid;
+}
+.planClms:nth-child(1){
+    color: #E42956;
+    border-color: #E42956;
+}
+.planClms:nth-child(2){
+    color: #F07531;
+    border-color: #F07531;
+}
+.planClms:nth-child(3){
+    color: #E2C621;
+    border-color: #E2C621;
+}
+.planClms:nth-child(4){
+    color: #59A078;
+    border-color: #59A078;
+}
+.planClms:nth-child(5){
+    color: #2BA6DE;
+    border-color: #2BA6DE;
+}
+.checkmark {
+    display: flex;
+    justify-content: center;
+    width: calc(100%*(1/5) - 5px);
+    height: max(40px,3.14583vw);
+    align-items: center;
+}
+.checkmark span {
+    width: max(18px,1.5625vw);
+    height: max(18px,1.5625vw);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #59CE51;
+    border-radius: 50%;
+    color:#000
+}
+.ottLogo {
+    max-width: max(45px,3.64583vw);
+}
+.contRow .rowLeft span {
+    font-size: max(18px,1.4583vw);
+    line-height: max(28px,2.1875vw);
+}
+.dashed .rowLeft span {
+    font-size: max(18px,1.4583vw);
+    line-height: max(28px,2.1875vw);
+}
+.dashed {
+    border-bottom: 1px dashed #878787;
+    align-items: center;
+    min-height: 50px;
+    padding-top: max(10px);
+    padding-bottom: max(10px);
+}
+.contRow.dashed > div {
+    border-bottom: 0px dashed #878787;
+    min-height: 3.90625vw;
+    align-items: center;
+    display: flex;
+}
+.realPrice,.reducedPrice {
+    font-size: max(18px,1.4583vw);
+    line-height: max(28px,2.1875vw);
+}
+.realPrice span {
+    position: relative;
+}
+.realPrice span::after {
+    content: '';
+    width: 115%;
+    position: absolute;
+    height: 2px;
+    background-color: #E42956;
+    left: -7%;
+    transform: rotate(-12deg);
+    top: max(0.885416vw);
+}
+i.info {
+    display: flex;
+    width: max(18px, 1.25vw);
+    height: max(18px, 1.25vw);
+    border: 1px solid;
+    border-radius: 50%;
+    font-style: normal;
+    font-size: max(14px, 1.0416vw);
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.border-0 {
+    border-width: 0 !important;
+}
+.rowRight button {
+    margin-left:max(5px,0.52083vw);
+    margin-right:max(5px,0.52083vw)
+}
+.direction-col {
+    flex-direction: column;
+}
+.switch-tab {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap:max(5px,0.364583vw)
+}
+.stabs {
+    width: 100%;
+    border: 1px solid #6D6D6D;
+    height: max(27px,2.447916vw);
+    display: flex;
+    align-items: center;
+    border-radius: max(14px,1.25vw);
+    padding-left: 2px;
+    padding-right: 2px;
+}  
+.switch-btn {
+    width: 50%;
+    border-radius: 0.989583vw;
+    height: calc(1.97916vw);
+    font-size: max(10px,0.72916vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF50;
+    font-family: 'Poppins Medium';
+}
+.switch-btn.active {
+    background-color: #E42956;
+    color: #FFFFFF;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 37px;
+    border-radius: 37px;
+    background-color: #f3f4f4;
+    cursor: pointer;
+    transition: all .3s;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px rgba(0,0,0, .3);
+  }
+  .switch input{
+    display: none;
+  }
+  .switch input:checked + div{
+    left: calc(80px - 32px);
+    box-shadow: 0px 0px 0px white;
+  }
+  .switch div{
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    border-radius: 27px;
+    background-color: white;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 0px 1px rgb(150,150,150);
+    transition: all .3s;
+  }
+  .switch div:before, .switch div:after{
+    position: absolute;
+    content: 'Yearly';
+    width: calc(80px - 40px);
+    height: 37px;
+    line-height: 37px;
+    font-family: 'Varela Round';
+    font-size: 14px;
+    font-weight: bold;
+    top: -5px;
+  }
+  .switch div:before{
+    content: 'Monthly';
+    color: rgb(120,120,120);
+    left: 100%;
+  }
+  .switch div:after{
+    content: 'Yearly';
+    right: 100%;
+    color: white;
+  }
+  
+  .switch-checked{
+    background-color : #e74c3c;
+    box-shadow: none;
+  }
+
+  @media screen and (max-width:767px) {
+    .plansWap.show {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        transition: all 0.25s;
+        min-width: 668px;
+    }
+    .realPrice span::after {
+        top: max(11px,0.885416vw);
+    }
+    .headRow .rowLeft span {
+        font-size: max(3.88vw);
+        font-family: 'Poppins Medium';
+        line-height: max(11.66vw);
+    }
+    .headRow .rowLeft span br {
+        display: none;
+    }
+    .planClms {
+        width: calc(100%*(1/5) - 5px);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        font-size: max(4.444vw);
+        text-transform: uppercase;
+        height: max(9.166vw);
+        border-radius: max(5px,0.52083vw);
+        border-width: 1px;
+        border-style: solid;
+    }
+    .switch-tab {
+        align-items: center !important;
+    }
+    .stabs {
+        width: 100%;
+        height: max(6.92307vw);
+        border-radius: max(3.589743vw);
+    }
+    .switch-btn {
+        height: max(5.384615vw);
+        border-radius: max(2.82051vw);
+        font-size: 2.564102vw;
+    }
+  }

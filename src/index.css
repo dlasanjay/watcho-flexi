@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding:0;
+  font-family:'Poppins';
+  background-color: #171717;
+  color:#fff;
+  font-size: max(16px,1.0432vw);
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+ul,ol {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+button {
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: inherit;
+}
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: max(15px,1.0416vw);
+}
+.form-check label {
+  display: inline-block;
+  font-size: max(12px,0.833vw);
+  color: #FFFFFF80;
+}
+.form-check  a {
+  color: #e42956;
+  text-decoration: none;
+}
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.5em;
+  margin-right: 10px;
+  
+}
+.form-check-input {
+  width: max(1em,0.9375vw);
+  height: max(1em,0.9375vw);
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid  #e42956;;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+.form-check-input:checked {
+  background-color: #e42956;
+  border-color: #e42956;
+}
+.form-check-input:checked[type=checkbox] {
+  background-image: url('./assets/images/icons/check-icon.png');
+  background-size: 70%;
+}
+
+@media screen and (max-width:767px) {
+  .form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+    margin-right: 0px;
+  }
+  .form-check label {
+      color: #ffffff80;
+      display: inline-block;
+      font-size: max(12px,.833vw);
+      text-align: left;
+  }
+  .form-check label br {
+    display: none
+  }
+  .form-check {
+    text-align: left;
+  }
+}

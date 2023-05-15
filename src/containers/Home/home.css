@@ -1,0 +1,470 @@
+.wrapper {
+    padding-left:8.385416vw;
+    padding-right: 8.385416vw;
+  }
+  .cardWrapper {
+    display: flex;
+    justify-content: center;
+    gap:3.125vw;
+    flex-wrap: wrap;
+  }
+  .site-btn-default {
+    display: inline-flex;
+    background-color: #E42956;
+    color: #ffffff;
+    border-radius: max(5px,0.520833vw);
+    border:0;
+    outline: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: max(16px,1.25vw);
+    cursor: pointer;
+    padding-left:max(15px,1.875vw);
+    padding-right:max(15px,1.875vw);
+    height: max(56px,4.27083vw);
+  }
+  .ReactModal__Overlay  {
+    z-index: 99;
+    background-color: rgba(0,0,0,0.25) !important;
+  }
+  .ReactModal__Content {
+    padding: max(20px,1.5625vw) !important
+  }
+  .modal-content {
+    position: relative;
+  }
+  .btn-close {
+    background:#e42956; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    width: max(18px, 1.24vw);
+    height: max(18px, 1.24vw);
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .modal-heading {
+    color: #1C1C1C;
+    font-size: max(18px, 1.4583vw);
+    line-height: 2.135416vw;
+    padding-bottom: max(10px, 1.024vw);
+    border-bottom:1px solid #eeeeee
+  }
+  .ott-list {
+    padding-top: max(20px,1.302083vw);
+    padding-bottom: max(20px,1.302083vw);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    flex-grow: 1;
+    margin: auto;
+    border-bottom:1px solid #eeeeee;
+  }
+  .ott-list li {
+    text-align: center;
+    color: #1C1C1C;
+    width: calc(100%*(1/6) - 1vw);
+  }
+  .ott-list li img {
+    max-width: 100%;
+  }
+  .platformname {
+    color: #E42956;
+    font-size: max(10px, 0.729166vw);
+    font-family: 'Poppins SemiBold';
+    line-height: 1.135416vw;
+    min-height: 2.135416vw;
+}
+  .platformprice {
+    font-size: max(14px,1.04166vw);
+  }
+  .platformTerm {
+    font-size: max(10px, 0.729166vw);
+  }
+  .modal-footer {
+    text-align: center;
+    padding-top: max(20px,1.302083vw);
+  }
+  .totalCast {
+    color: #1C1C1C;
+    font-size: max(18px, 1.4583vw);
+    line-height: 2.135416vw;
+    padding-bottom: max(10px, 1.024vw);
+    font-family: 'Poppins Medium';
+  }
+
+  .saveUpto {
+    color:#E42956;
+    font-size: max(14px, 1.04166vw);
+    font-family: 'Poppins SemiBold';
+  }
+  .subsSteps {
+    width: max(47.39583vw);
+    margin-left:auto;
+    margin-right: auto;
+    padding-top:max(9.375vw);
+    padding-bottom:max(6.25vw);
+    text-align: center;
+  }
+  .sub-heading {
+    font-size: max(20px, 1.97916vw);
+    line-height: max(30px,2.135416vw);
+    text-align: center;
+  }
+  .setpBox {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:max(25px,2.34375vw);
+    margin-bottom:max(25px,2.34375vw);
+    position: relative;
+    font-family: 'Poppins Light';
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .setpBox::before {
+    content: '';
+    height: 1px;
+    background-color: #E42956;
+    position: absolute;
+    top:calc(50% - 1px);
+    width: 100%;
+    z-index: 0;
+  }
+  .setpBox span {
+    display: inline-flex;
+    font-size: max(18px,1.25vw);
+    align-items: center;
+    justify-content: center;
+    width: max(30px,1.927083vw);
+    height: max(30px,1.927083vw);
+    background-color: #E42956;
+    border-radius: 50%;
+    z-index: 1;    
+  }
+  .setpBoxTet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins Light';
+  }
+  .setpBoxTet > span {
+    display: inline-flex;
+    font-size: max(16px,1.04166vw);
+    justify-content: center;
+    width: 10%;
+  }
+  .setpBoxTet > span:nth-child(2) {
+    width: 15%;
+  }
+  .subsplan-btn {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: max(20.989583vw);
+    height: max(4.270833vw);
+    background-color: #E42956;
+    color: #ffffff;
+    border-radius: max(5px,0.520833vw);
+    border:0;
+    outline: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: max(16px,1.25vw);
+    cursor: pointer;
+    margin-top:max(50px,4.6875vw)
+  }
+  .compareSec {
+    width: max(68.75vw);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .expand-txt {
+    display: flex;
+    font-size: max(20px,1.302083vw);
+    line-height: max(30px,2.135416vw);
+    cursor: pointer;
+    justify-content: center;
+  }
+  .expand-txt .expand-btn {
+    color: #E2C621;
+    font-family: inherit;
+    font-size: inherit;
+    margin-left: 5px;
+    position: relative;
+  }
+  .plansCmpr {
+    width: 100%;
+  }
+  .faqsSec {
+    width: max(68.75vw);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:max(50px,6.25vw)
+  }
+
+  .faqlist {
+    padding:0;
+    list-style: none;
+    margin-top:max(30px,2.60416vw)
+  }
+  .faqlist li {
+    font-size: max(18px,1.25vw);
+    line-height: max(30px,2.1875vw);
+    border-top:1px dashed #878787;
+    border-bottom:1px dashed #878787;
+    padding-top:max(20px,1.666vw);
+    padding-bottom:max(20px,1.666vw);
+  }
+  .faq__question {    
+    border-top:1px dashed #878787;
+    border-bottom:1px dashed #878787;
+    padding-top:max(20px,1.666vw);
+    padding-bottom:max(20px,1.666vw);
+  }
+  .faq__question:first-child{
+    border-top:0
+  }
+  .faq__question dt{
+    font-size: max(18px,1.25vw);
+    line-height: max(30px,2.1875vw);
+  }
+  .faq__question dt button {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  .faq__question dt button.font-weight-bold::after {
+    content:"\f106";
+    font-family: 'FontAwesome';
+  }
+  .faq__question dt button:after {
+    content:"\f107";
+    font-family: 'FontAwesome';
+    
+  }
+  .faqlist li button {
+    width: 100%;
+    text-align: left;
+}
+  .faqlist li .faq-answer ,.faq__desc {
+    color: #B7B7B7;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all;
+    font-size: max(18px,1.25vw);
+    line-height: max(30px,2.1875vw);
+  }
+  .faqlist li .faq-answer.show, .show-description {
+    color: #B7B7B7;
+    margin-top:max(20px,1.666vw);
+    height: auto;
+    opacity: 1;
+    overflow: auto;
+  }
+  .scrollto {
+    font-size: max(14px,0.9375vw);
+    color: #B7B7B7;
+    text-align: center;
+    margin-top:max(20px,1.666vw);
+    margin-bottom:max(20px,1.666vw);
+  }
+  .scrollto button {
+    text-decoration: underline;
+    color: #B7B7B758;
+  }
+
+  @media screen and (max-width:767px) {
+    .wrapper {
+        padding-left: 6.666vw;
+        padding-right: 6.666vw;
+    }
+    .cardWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6.666vw;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 7.777vw;
+    }
+    .subsSteps {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 15.277vw;
+      padding-bottom: 19.444vw;
+      text-align: center;
+  }
+  .stepWrap {
+    display: flex;
+    gap: 6.944vw;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+  .sub-heading {
+    font-size: max(6.6666vw);
+    line-height: max(8.888vw);
+    text-align: center;
+}
+.subsplan-btn {
+    width: 60.277vw;
+    height: 13.333vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E42956;
+    border-radius: max(2.777vw);
+    color: #fff;
+    font-size: max(5vw);
+    outline: 0;
+    border-width: 0;
+    margin: max(20px,1.822916vw) auto;
+    cursor: pointer;
+}
+
+.setpBox {
+  flex-direction: column;
+  width: 10.277vw;
+  margin-left: 0;
+  margin-right: 0;
+  gap: 9.444vw;
+  margin-top: max(11.1111vw);
+  margin-bottom: max(8.333vw);
+}
+
+.setpBoxTet {
+  width: 41.944vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9.444vw;
+  margin-top: max(11.1111vw);
+  margin-bottom: max(8.333vw);
+}
+.setpBoxTet > span {
+  display: flex;
+  font-size: max(4.444vw);
+  justify-content: flex-start;
+  width: 100% !important;
+  line-height: 10.277vw;
+}
+.setpBoxTet > span br {
+  display: none;
+}
+.setpBox span {
+  width: 10.277vw;
+  height: 10.277vw;
+  font-size: 6.666vw;
+}
+.expand-txt {
+  display: flex;
+  font-size: max(4.444vw);
+  line-height: max(6.111vw);
+  cursor: pointer;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.expand-btn i {
+  position: absolute;
+  right: -4.5vw;
+  top: 1.5vw;
+}
+.compareSec {
+  width: max(100%);
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.plansCmpr {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.plansCmpr::-webkit-scrollbar {
+  display: none;
+}
+.setpBox:before {
+  background-color: #e42956;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 2px;
+  z-index: 0;
+  left: 50%;
+}
+.ReactModal__Content {
+  padding: max(20px,1.5625vw) !important;
+  width: 90% !important;
+  border-radius: 7.6923vw !important;
+  padding-top: 5.64102vw !important;
+  padding-bottom: 5.64102vw !important;
+  padding-left:2.564102vw !important;
+  padding-right: 2.564102vw !important;
+}
+
+.modal-heading {
+  font-size: 4.3589743vw;
+  margin-left: 2.564102vw;
+  margin-right: 2.564102vw;
+  line-height: 6.666vw;
+}
+.btn-close {
+  max-width: 16px;
+  max-height: 16px;
+}
+.btn-close img {
+  max-width: 16px;
+}
+.ott-list {
+  padding-top: max(3.846153vw);
+  padding-bottom: max(3.846153vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 2.5641vw;
+  flex-grow: 1;
+  margin: auto;
+  border-bottom: 1px solid #eeeeee;
+}
+.ott-list li {
+  width: calc(100%*(1/6) - 2.5vw);
+  display: flex;
+  flex-direction: column;
+}
+.platformname {
+  font-size: 2.051282vw;
+  line-height: 3.15384vw;
+  min-height: 8.15384vw;
+}
+.platformprice {
+  font-size: max(3.076923vw);
+  line-height: 6.41025vw;
+}
+.platformTerm {
+  font-size: 2.051282vw;
+  line-height: 6.15384vw;
+}
+.totalCast {
+  font-size: max(4.358974vw);
+  line-height: 6.6666vw;
+}
+.saveUpto {
+  font-size: 3.07692vw;
+  line-height: 6.410256vw;
+}
+
+
+}
+ 

@@ -1,0 +1,707 @@
+.popupWrap {
+    width: 100%;
+    position:fixed;
+    top: 0;
+    height: calc(100vh);
+    /* min-height: 51.5625vw; */
+    z-index: 999;
+    display: none;
+    /* background-image: url('../../assets/images/popupbg.png');
+    background-repeat: no-repeat;
+    background-size: 100%; */
+    background-color: #271414;
+    overflow-y: auto;
+    
+}
+.popupWrap {
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .popupWrap::-webkit-scrollbar {
+    display: none;
+  }
+.popupWrap.show {
+    display: block;
+}
+.popupbody {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    height: calc(100vh);
+    min-height: 50.5625vw;;
+}
+.popleftSec {
+    background-color: #27272750;
+    width: 41.583vw;
+    border-radius: 0 1.5625vw 1.5625vw 0;
+    display: flex;
+    flex-direction: column;
+    padding-top:max(60px,8.3333vw);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.summaryBox {
+    padding-top: 0;
+    padding-bottom: max(20px,3.5625vw);
+    padding-left: max(46px,6.8125vw);
+    padding-right: max(50px,6.8125vw);
+    border-bottom: 0px solid #271414;
+}
+
+.summaryBox p {
+    font-size: max(14px,0.9375vw);
+    font-family: 'Poppins Light';
+    line-height: max(20px,1.875vw);
+    opacity: 0.5;
+    margin-bottom: max(5px,0.416vw);
+}
+.summaryBox h3 {
+    font-size: max(16px,1.4583vw);
+    line-height: max(22px,1.875vw);
+    margin-bottom: 0px;
+}
+.subsprc {
+    display: flex;
+    font-size: max(16px,1vw);
+    line-height: max(20px,1.5625vw);
+    align-items: center;
+    gap: max(8px, 0.65vw)
+}
+.subsprc span {
+    font-size: max(24px,1.97916vw);
+    color: #E42956;
+    line-height: max(30px,2.96875vw);
+    font-family: 'Poppins Medium';
+}
+.subsprc del {
+    font-size: max(16px,1vw);
+    line-height: max(20px,1.5625vw);
+    opacity: 0.5;
+    font-family: 'Poppins Medium';
+}
+.subsprc dd {
+    font-size: max(16px,1vw);
+    line-height: max(20px,1.5625vw);
+    opacity: 0.5;
+}
+.allpacks {
+    font-size: max(16px,1.0416vw);
+    line-height: max(20px,1.40625vw);
+}
+.coupon-form > div{
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: max(4px,0.4166vw);
+    padding: max(3px,0.25641vw);
+    min-height: max(38px,2.7083vw);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.coupon-form > div.without-code button {
+    background-color: #ADADAD50;
+    border-radius: max(4px,0.4166vw);
+    color: #FFFFFF50;
+    height: 100%;
+    display: flex;
+    width: max(78px,5.46875vw);
+    height: max(33px,2.239583vw);
+    align-items: center;
+    justify-content: center;
+}
+.coupon-form > div.with-code button {
+    font-size: max(10px,0.72916vw);
+}
+.coupon-form > div img {
+    max-width: max(22px, 1.71875vw);
+}
+.coupon-form > div input,
+.coupon-form > div input:focus {
+    width: 62%;
+    height: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    height: max(33px,2.239583vw);
+    outline: none;
+    font-size: max(16px,1.0416vw);
+}
+.paymemtsmr {
+    font-size: max(18px,1.25vw);
+    line-height: max(27px,1.875vw);
+}
+.paymemtsmr .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: max(5px,0.52083vw);
+}
+.paymemtsmr .row.total {
+    border-top: 1px solid #686766;
+    border-bottom: 1px solid #686766;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.poprightSec {
+    width: 31.77083vw;
+    margin-left: max(75px,6.51041vw);
+    display: flex;
+    padding-top:max(60px,8.3333vw)
+}
+.subscriptionForm {
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+.subscriptionForm h2 {
+    font-size: max(30px,2.083vw);
+    line-height: max(40px,2.60416vw);
+    color: #E42956;
+    font-family: 'Poppins Medium';
+    margin-bottom: max(14px,1.25vw);
+}
+.subscriptionForm p {
+    font-size: max(14px,0.9375vw);
+}
+.paysteps {
+    margin-top: max(25px,2.34375vw);
+    margin-bottom: max(25px,2.34375vw);
+    display: flex;
+    font-size: max(12px,0.78125vw);
+    line-height: max(16px,0.9375vw);
+}
+.paysteps ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+.paysteps ul::before {
+    content: '';
+    height: 1px;
+    width: 84.5%;
+    background-color: #ffffff80;
+    position: absolute;
+    left: 0;
+    top: max(7px,0.5vw);
+    z-index: 0;
+}
+.paysteps ul::after {
+    content: '';
+    height: 1px;
+    background-color: #E42956;
+    position: absolute;
+    left: 0;
+    top: max(7px,0.5vw);
+    z-index: 1;
+}
+.paysteps ul.step-one::after {
+    content: '';
+    height: 1px;
+    width: 0%;
+}
+.paysteps ul.step-two::after {
+    content: '';
+    height: 1px;
+    width: 43%;
+}
+.paysteps ul.step-three::after {
+    content: '';
+    height: 1px;
+    width: 84.5%;
+}
+.paysteps ul li {
+    width: max(64px,4.6875vw);
+    max-width: calc(33.33%);
+    position: relative;
+    z-index: 2;
+}
+.dots {
+    width: max(14px,1vw);
+    height: max(14px,1vw);
+    border-radius: 50%;
+    border:1px solid #e42956;
+    display: inline-block;
+    margin-bottom: max(12px,0.78125vw);
+}
+.dots.fill {
+    background-color: #e42956;
+}
+.paysteps  li div {
+    opacity: 0.5;
+}
+.form-subheading {
+    font-size: max(18px,1.25vw);
+    font-family: 'Poppins Medium';
+    line-height: max(22px,1.5625vw);
+    margin-bottom: max(14px,1.0416vw); ;
+}
+.watchform {    
+    padding-top: 0;    
+}
+.fieldsWrap {
+    margin-bottom: max(25px,2.34375vw);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.fieldsWrap > fieldset {
+    border-radius: max(2px,0.2083vw);
+    border:1px solid #FFFFFF40;
+    min-height: max(42px,2.8125vw);
+}
+.fieldsWrap > fieldset:nth-child(1) {
+    width: max(7.083vw);
+}
+.fieldsWrap > fieldset:nth-child(1) legend {
+    text-align: center;
+}
+.fieldsWrap > fieldset:nth-child(2) {
+    width: max(23.64583vw);
+}
+.fieldsWrap > fieldset:nth-child(2) legend {
+    margin-left: max(8px,0.82083vw); 
+}
+.fieldsWrap > fieldset legend {
+    color: #FFFFFF80;
+    font-size: max(10px,0.72916vw);
+    line-height: max(12px,0.833vw);
+}
+.drop-list {
+    min-height: max(42px,2.8125vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: max(8px,0.82083vw);
+}
+.input-field,
+.input-field:focus,
+.input-field:focus-visible,
+.input-field:focus-within {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background:none;
+    border:0;
+    outline: 0;
+    padding-left: max(8px,0.82083vw);
+    font-size: max(14px,0.9375vw);
+    color:#fff;
+}
+.form-btn {
+    height: max(42px,2.916vw);
+    min-width: max(200px,15.15625vw);
+    font-size: max(18px,1.25vw);
+    margin-top: max(10px,1.04166vw)
+}
+.form-btn:disabled {
+    background-color: #ADADAD;
+    cursor: not-allowed;
+}
+.close-button {
+    position: absolute;
+    width: max(24px,1.25vw);
+    height: max(24px,1.25vw);
+    display: flex;
+    top:50px;
+    right: 50px;
+    background: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color:#000;
+}
+.watchform.stepOne {
+    display: none;
+}
+.subtext {
+    font-size: max(12px,0.833vw);
+    color:#FFFFFF80;
+    letter-spacing: -0.02760416vw;
+}
+.white {
+    color:#FFFFFF !important
+}
+.subtext .inline-btn {
+    color: #E42956;
+}
+.otpContainerWrap {
+    display: flex;
+    align-items: center;
+}
+.otpbox {
+    width: max(40px,3.125vw) !important;
+    height: max(40px,3.125vw);
+    background: none;
+    margin-right: 1.045vw;
+    border: 1px solid #fff;
+    border-radius: max(3px,0.3vw);
+    color: #fff;
+    font-size: max(16px,1.045vw);
+    margin-top:max(30px,2.34375vw);
+    margin-bottom:max(30px,2.34375vw);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+}
+.otpError {
+    border: 1px solid red; 
+    color:red
+}
+.errormsg {
+    font-size: max(16px,1.045vw); 
+    color:red;
+    letter-spacing: -0.02760416vw;
+}
+.success-check {
+    width: max(18px,1.5625vw);
+    height: max(18px,1.5625vw);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1AFF00;
+    border-radius: 50%;
+    color: #000;
+}
+.mb-30 {
+    margin-bottom:max(20px,1.5625vw);
+}
+
+.success-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background-color: #ffffff50;
+    top: 0;
+    display: none;
+    
+}
+.success-popup.show {
+    display: flex;
+}
+.success-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success-container {
+    width: max(24.52083vw);
+    position: relative;
+    background-color: #fff;
+    border-radius: max(6px,0.72916vw);
+    height: 15.8333vw;
+    justify-content: flex-end;
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #1C1C1C;
+    flex-direction: column;
+    align-items: center;
+    gap: max(10px,1.04166vw);
+    padding-bottom: max(20px,1.822916vw);
+    padding-top:5.5vw
+}
+.success-imgbox {
+    position: absolute;
+    top: max(-5vw);
+    width: max(100px,10vw);
+    height: max(100px,10vw);
+    background: var(--unnamed-color-1c1c1c) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    justify-content: center;
+    margin-left: -5vw;
+}
+.success-imgbox img {
+    max-width: 100%;
+}
+.success-container h3 {
+    font-size: max(20px,1.614583vw);
+    line-height: max(30px,2.447916vw);
+    font-family: 'Poppins SemiBold';
+    text-align: center;
+    text-transform: uppercase;
+}
+.success-container .success-subtext {
+    font-size: max(16px,1.197916vw);
+    line-height: max(22px,1.77083vw);
+    font-family: 'Poppins SemiBold';
+    text-align: center;
+    margin-bottom: 1vw;
+}
+.success-container .success-upto {
+    font-size: max(12px,0.9375vw);
+    line-height: max(18px,1.35416vw);
+    color: #707070;
+    text-align: center;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+
+@media screen and (max-width:767px) {
+    .popupbody {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        min-height: calc(216.41025vw);
+        height: auto;
+        flex-direction: column;
+    }
+    .popupbody::after {
+        content: '';
+        width: 100%;
+        height: 44.871794vw;
+        position: fixed;
+        background-image:linear-gradient(180deg, #271a1a50, #000);
+        bottom:0;
+        z-index: 3;
+    }
+    .popleftSec {
+        background-color: #27272750;
+        width: auto;
+        border-radius: 0 1.5625vw 1.5625vw 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: max(6.4102vw);
+        position: relative;
+        order: 1;
+        padding-bottom: 23.07692vw;
+    }
+   
+    .close-button {
+        top:20px;
+        right: 20px;
+    }
+    .subscriptionForm {
+        text-align: center;
+    }
+    .subscriptionForm h2 {
+        font-size: max(6.666vw);
+        line-height: max(7.692307vw);
+        margin-bottom: max(14px,1.25vw);
+    }
+    .subscriptionForm p {
+        font-size: max(3.589743vw);
+        line-height: 4.1025641vw;
+    }
+    .paysteps ul {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+    .paysteps ul::before {
+        width: 80.5%;
+        left: 25px;
+        top: max(7px,0.5vw);
+        z-index: 0;
+    }
+    .paysteps ul.step-one::after {
+        content: '';
+        height: 1px;
+        width: 0%;
+        left: 25px;
+    }
+    .paysteps ul.step-two::after {
+        content: '';
+        height: 1px;
+        width: 43% !important;
+        left: 25px;
+    }
+    .paysteps ul.step-three::after {
+        content: '';
+        height: 1px;
+        width: 84.5% !important;
+        left: 25px;
+    }
+    .otpContainerWrap {
+        display: block;
+    }
+    .otpContainer{
+        width: 100%;
+        justify-content: center;
+        gap: 2.307692vw;
+    }
+    .poprightSec {
+        width: auto;
+        margin-left: max(7.69230vw);
+        margin-right: max(7.69230vw);
+        display: flex;
+        padding-top: max(6.41025vw);
+        padding-bottom: max(11.5384vw);
+    }
+    .summaryBox {
+        padding-bottom: max(20px,3.5625vw);
+        padding-left: max(7.6923vw);
+        padding-right: max(7.6923vw);
+        border-bottom: 10px solid #00000050;
+        padding-top:6.15384vw;
+        padding-bottom:6.15384vw;
+    }
+    .summaryBox:nth-child(1) {
+        padding-top:1.15384vw;
+    }
+    .fieldsWrap>fieldset:first-child {
+        width: 30%;
+    }
+    .fieldsWrap>fieldset:nth-child(2) {
+        width: 65%;
+    }
+    .errormsg {
+        font-size: 2.82051vw;
+    }
+    fieldset .errormsg {
+        letter-spacing: -.02760416vw;
+        position: absolute;
+    }
+    .paysteps li div {
+        opacity: 0.5;
+        font-size: 3.07692vw;
+        line-height: 4.1025641vw;
+    }
+    .form-subheading {
+        font-size: 4.1025641vw;
+        line-height: max(6.1538461vw);
+        margin-bottom: max(14px,1.0416vw);
+    }
+    .fieldsWrap>fieldset legend {
+        font-size: max(3.07692vw);
+    }
+    .input-field, .input-field:focus, .input-field:focus-visible, .input-field:focus-within {
+        font-size: 4.10256410vw;
+    }
+    .otpbox {
+        width: max(17.948717vw) !important;
+        height: max(17.948717vw);
+        font-size: 4.615384vw;
+    }
+    .form-btn {
+        height: max(12.307692vw);
+        min-width: max(90%,15.15625vw);
+        border-radius: max(2.5641vw);
+        margin-top: max(10px,1.04166vw);
+        font-size: 5.12820vw;
+        position: fixed;
+        bottom: 11.538461vw;
+        left: 5%;
+        z-index: 4;
+    }
+    .summaryBox p {
+        font-size: 3.589743vw;
+        line-height: max(7.69230vw);
+        opacity: 0.5;
+        margin-bottom: max(0.56410vw);
+    }
+    .summaryBox h3 {
+        font-size: max(4.615384vw);
+        line-height: max(8.717948vw);
+        margin-bottom: 0px;
+    }
+    .subsprc span {
+        font-size: max(7.1794871vw);
+        line-height: max(10.76923vw);
+    }
+    .subsprc del {
+        font-size: max(3.589743vw);
+        line-height: max(20px,1.5625vw);
+    }
+    .subsprc dd {
+        font-size: max(3.589743vw);
+        line-height: max(20px,1.5625vw);
+    }
+    .allpacks {
+        font-size: max(3.589743vw);
+        line-height: max(4.871794vw);
+    }
+    .coupon-form > div {
+        border-radius: max(2.5641vw);
+        padding: max(3px,0.25641vw);
+        min-height: max(14.3589743vw);
+        padding-left: 3.846153vw
+    }
+    .coupon-form > div input, .coupon-form > div input:focus {
+        width: 62%;
+        height: 100%;
+        background: none;
+        border: none;
+        color: #fff;
+        height: max(33px,2.239583vw);
+        outline: none;
+        font-size: max(4.1025641vw);
+    }
+    .coupon-form > div.with-code button {
+        width: max(26.923vw);
+        font-size: 3.589743vw;
+        text-decoration: underline;
+    }
+    .coupon-form > div.with-code input {
+        width: 54%;
+    }
+    .coupon-form > div img {
+        max-width: max(7.1794871vw);
+    }
+    .paymemtsmr {
+        font-size: max(4.1025641vw);
+        line-height: max(9.23076vw);
+    }
+    .success-container {
+        width: 69.2307vw;
+        height: 53.2307vw;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 18.5vw;
+    }
+    .success-container h3 {
+        font-size: 5.897435vw;
+        line-height: max(30px,2.447916vw);
+        text-transform: uppercase;
+    }
+    .success-imgbox {
+        position: absolute;
+        top: max(-16.666vw);
+        width: 33.333vw;
+        height: 33.333vw;
+        justify-content: center;
+        margin-left: -16.666vw;
+    }
+
+    .success-container .success-subtext {
+        font-size: max(4.102564vw);
+        line-height: max(6.41025vw);
+        font-family: 'Poppins SemiBold';
+        text-align: center;
+        margin-bottom: 3vw;
+    }
+    .success-container .success-upto {
+        font-size: max(3.07692vw);
+        line-height: max(4.61538vw);
+        color: #707070;
+        text-align: center;
+    }
+
+    .success-popup {
+        position: fixed;
+        z-index: 9;
+        background-color: #ffffff50;
+        top: 0;
+        
+    }
+}
