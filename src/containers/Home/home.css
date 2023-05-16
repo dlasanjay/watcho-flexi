@@ -28,8 +28,11 @@
     background-color: rgba(0,0,0,0.25) !important;
   }
   .ReactModal__Content {
-    padding: max(20px,1.5625vw) !important
-  }
+    padding-top: max(20px,1.5625vw) !important;
+    padding-bottom: max(20px,1.5625vw) !important;
+    padding-left: max(40px, 4.947916vw) !important;
+    padding-right: max(40px, 4.947916vw) !important;
+}
   .modal-content {
     position: relative;
   }
@@ -43,31 +46,48 @@
     width: max(18px, 1.24vw);
     height: max(18px, 1.24vw);
     position: absolute;
-    right: 0;
+    top:max(10px,1.302083vw);
+    right: max(10px,1.302083vw);
     cursor: pointer;
   }
   .modal-heading {
     color: #1C1C1C;
     font-size: max(18px, 1.4583vw);
     line-height: 2.135416vw;
+  }
+  .sub-desc {
+    font-size: max(14px,0.9375vw);
+    border-bottom:1px solid #eeeeee;
     padding-bottom: max(10px, 1.024vw);
-    border-bottom:1px solid #eeeeee
+    color: #1C1C1C;
+  }
+  .apps-block {
+    margin:0
+  }
+  .apps-block p{
+    font-size: max(10px, 0.83333vw);
+    line-height: max(32px, 2.1875vw);
+    color: #1C1C1C;
+    margin-top: max(5px, 0.57vw)
   }
   .ott-list {
-    padding-top: max(20px,1.302083vw);
-    padding-bottom: max(20px,1.302083vw);
+    padding-top: max(0vw);
+    padding-bottom: max(10px,0.56vw);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1vw;
     flex-grow: 1;
     margin: auto;
-    border-bottom:1px solid #eeeeee;
-  }
+    border-bottom: 1px dashed #eeeeee;
+}
+.ott-list:last-child {
+  border-bottom: 0;
+}
   .ott-list li {
     text-align: center;
     color: #1C1C1C;
-    width: calc(100%*(1/6) - 1vw);
+    width: calc(3.645833vw);
   }
   .ott-list li img {
     max-width: 100%;
@@ -88,6 +108,32 @@
   .modal-footer {
     text-align: center;
     padding-top: max(20px,1.302083vw);
+  }
+  .ReactModal__Content .subsplan-btn {
+    margin-top: 0;
+    width: max(17.989583vw);
+    height: max(3.5416vw);
+  }
+  .ott-list input {
+      width: max(1em,1.25vw);
+      height: max(1em,1.25vw);
+      margin-top: 0.25em;
+      vertical-align: top;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border: 1px solid #707070;
+      appearance: none;
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+      border-radius: 50%;
+  }
+  .ott-list input:checked {
+      background-color: #2BDB17;
+      border-color: #2BDB17;
+      background-image: url('../../assets/images/icons/check-icon.png');
+      background-size: 60%;
   }
   .totalCast {
     color: #1C1C1C;
@@ -405,52 +451,62 @@
   left: 50%;
 }
 .ReactModal__Content {
-  padding: max(20px,1.5625vw) !important;
+  padding: max(6.41025vw) max(5.12820vw) !important;
   width: 90% !important;
-  border-radius: 7.6923vw !important;
-  padding-top: 5.64102vw !important;
-  padding-bottom: 5.64102vw !important;
-  padding-left:2.564102vw !important;
-  padding-right: 2.564102vw !important;
+  border-radius: 5.12820vw !important;
 }
 
 .modal-heading {
-  font-size: 4.3589743vw;
-  margin-left: 2.564102vw;
-  margin-right: 2.564102vw;
+  font-size: 5.12820vw;
+  margin-left: 0;
+  margin-right: 0;
   line-height: 6.666vw;
+  margin-bottom: 2.56410vw;
+}
+.sub-desc {
+  font-size: max(4.1025vw);
+  padding-bottom: max(10px, 1.024vw);
+}
+.apps-block p {
+  font-size: max(3.589743vw);
+  line-height: 6.92307vw;
 }
 .btn-close {
-  max-width: 16px;
-  max-height: 16px;
+  width: 4.4025vw;
+  height: 4.4025vw;
+  top:3.07692vw;
+  right: 3.07692vw;
 }
 .btn-close img {
-  max-width: 16px;
+  max-width: 4.4025vw;
 }
 .ott-list {
-  padding-top: max(3.846153vw);
-  padding-bottom: max(3.846153vw);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0 2.5641vw;
-  flex-grow: 1;
-  margin: auto;
-  border-bottom: 1px solid #eeeeee;
+  padding-top: 0;
+  padding-bottom: max(1.846153vw);
 }
 .ott-list li {
-  width: calc(100%*(1/6) - 2.5vw);
   display: flex;
   flex-direction: column;
+  width: 12.82051vw;
+}
+.ott-list input {
+  width: 4.35897vw;
+  height: 4.35897vw;
+}
+.ReactModal__Content .subsplan-btn {
+  margin-top: 0;
+  width: max(62.5641vw);
+  height: max(12.82vw);
+  margin-bottom: 0;
+  font-size: 4.10256vw;
 }
 .platformname {
-  font-size: 2.051282vw;
-  line-height: 3.15384vw;
-  min-height: 8.15384vw;
+  font-size: 2.56410vw;
+  line-height: 6.92307vw;
+  min-height: auto;
 }
 .platformprice {
-  font-size: max(3.076923vw);
-  line-height: 6.41025vw;
+  padding-top: 1.28205vw;
 }
 .platformTerm {
   font-size: 2.051282vw;

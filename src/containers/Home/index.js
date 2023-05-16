@@ -23,7 +23,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width:'36.4583vw',
+    width: '31.77083vw',
     borderRadius:'1vw'
   },
 };
@@ -168,36 +168,64 @@ const Index = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
+        <button onClick={closeModal} className='btn-close'><img src={require('../../assets/images/close.png')} alt='close'/></button>
         <div className='modal-content'>
-          <button onClick={closeModal} className='btn-close'><img src={require('../../assets/images/close.png')} alt='close'/></button>
-          <h2 className='modal-heading'>Individual OTTs Market Price</h2>
           
-          {
-          popupPlan.SubscriptionApps ?
-          <>
-
-        <ul className='ott-list'>
-          {
-            popupPlan.SubscriptionApps.map((row) => {
-                  return (
-                    <li key={row.AppName}>
-                      <div className='platformname'>{row.AppName}</div>
-                      <img src={row.AppIconUrl} alt={row.AppName} />
-                      <div className='platformprice'>&#8377; {row.AppPrice}</div>
-                      <div className='platformTerm'>per year</div>
-                    </li>
-                  )
-            })
-          }
-      
+          <h2 className='modal-heading'>Select Apps</h2>
+          <p className='sub-desc'>Select minimum of 5 Apps or maximum of 8 Apps</p>
+          
+        <div className='apps-block'>
+          <p>Popular Apps</p>
+          <ul className='ott-list'>        
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li>
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li> 
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li> 
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li>      
           </ul>
-          </>
-          :""
-        }
+
+          <p>Regional Apps</p>
+          <ul className='ott-list'>        
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li>
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li> 
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox' /></div>
+              </li> 
+              <li>
+                <div className='platformname'>Sony LIV</div>
+                <img src={require('../../assets/images/logos/logos-2.png')} alt='' />
+                <div className='platformprice'><input type='checkbox'  /></div>
+              </li>      
+          </ul>
+        </div> 
 
           <div className='modal-footer'>
-            <div className='totalCast'>Total Cost &#8377; {popupPlan.SubscriptionDisplayPriceWithTax}</div>
-            <div className='saveUpto'>Save upto &#8377; {popupPlan.SubscriptionDisplayPriceWithTax - popupPlan.SubscriptionPriceWithTax}</div>
+            <button className='subsplan-btn'>Done</button>            
           </div>
         </div>
       </Modal>
